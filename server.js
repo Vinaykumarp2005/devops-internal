@@ -7,6 +7,7 @@ app.get('/students',(req,res)=>{
 });
 
 app.post('/students',(req,res)=>{
+    console.log("Post called")
     const student={id:students.length+1,...req.body};
     students.push(student);
     return res.json(student)
