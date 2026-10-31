@@ -22,6 +22,7 @@ app.put('/students/:id',(req,res)=>{
     return res.json(students[index]);
 });
 app.delete('/students/:id',(req,res)=>{
+    console.log("Delete API")
     const id=Number(req.params.id);
     const index=students.findIndex(s=>s.id===id);
     if(index==-1){
